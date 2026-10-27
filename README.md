@@ -73,7 +73,7 @@ Or a local checkout:
   "mcpServers": {
     "lax": {
       "command": "node",
-      "args": ["/path/to/lax-mcp/bin/lax-mcp.js"]
+      "args": ["/path/to/lax-mcp/bin/laxmcp.js"]
     }
   }
 }

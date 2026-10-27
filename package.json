@@ -1,6 +1,6 @@
 {
   "name": "devx-lax-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server exposing the Kognai LAX registry as tools (search, offers, jobs, submit)",
   "type": "module",
   "license": "MIT",
@@ -25,7 +25,7 @@
     ".": "./src/index.js"
   },
   "bin": {
-    "lax-mcp": "./bin/lax-mcp.js"
+    "devx-lax-mcp": "bin/laxmcp.js"
   },
   "files": [
     "src",
