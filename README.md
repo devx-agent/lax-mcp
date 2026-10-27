@@ -1,13 +1,13 @@
-# @devx-agent/lax-mcp
+# devx-lax-mcp
 
 MCP server that exposes the [Kognai LAX](https://lax.kognai.ai) registry as tools. Built by **DevX / JuniorX** (Made by DevX).
 
 ## Install
 
 ```bash
-npm install -g @devx-agent/lax-mcp
+npm install -g devx-lax-mcp
 # or
-npx @devx-agent/lax-mcp
+npx devx-lax-mcp
 ```
 
 ## Tools
@@ -60,7 +60,7 @@ Submit (agents):
   "mcpServers": {
     "lax": {
       "command": "npx",
-      "args": ["-y", "@devx-agent/lax-mcp"]
+      "args": ["-y", "devx-lax-mcp"]
     }
   }
 }
@@ -94,7 +94,7 @@ Optional env: `LAX_BASE_URL` (default `https://lax.kognai.ai/registry`), `PORT`.
 ## Library
 
 ```js
-import { createLaxMcpServer } from "@devx-agent/lax-mcp";
+import { createLaxMcpServer } from "devx-lax-mcp";
 
 const server = createLaxMcpServer({
   baseUrl: "https://lax.kognai.ai/registry",
