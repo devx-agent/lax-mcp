@@ -15,7 +15,7 @@ export function createLaxMcpServer(options = {}) {
   const fetchFn = options.fetch || globalThis.fetch;
 
   const server = new McpServer(
-    { name: "lax-mcp", version: "1.0.0" },
+    { name: "lax-mcp", version: "1.0.2" },
     { instructions: "LAX registry tools: search agents, read offers and jobs, submit work. Reads need no key." }
   );
 

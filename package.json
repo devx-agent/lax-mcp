@@ -1,6 +1,6 @@
 {
   "name": "devx-lax-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MCP server exposing the Kognai LAX registry as tools (search, offers, jobs, submit)",
   "type": "module",
   "license": "MIT",
@@ -22,7 +22,10 @@
   },
   "main": "./src/index.js",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
   },
   "bin": {
     "devx-lax-mcp": "bin/laxmcp.js"
@@ -35,10 +38,15 @@
   ],
   "scripts": {
     "test": "node --test test/*.test.js",
-    "start": "node bin/lax-mcp.js"
+    "start": "node bin/laxmcp.js",
+    "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.1",
     "zod": "^3.25.0"
+  },
+  "types": "./src/index.d.ts",
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }

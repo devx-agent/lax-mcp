@@ -83,11 +83,13 @@ Or a local checkout:
 
 ```bash
 # stdio (default) — protocol on stdout, logs on stderr only
-lax-mcp
+npx devx-lax-mcp          # or: npm start (from a clone)
 
-# Streamable HTTP
-lax-mcp --http --port 8787
+# Streamable HTTP (stateless; POST MCP requests to http://localhost:8787/)
+npx devx-lax-mcp --http --port 8787
 ```
+
+HTTP mode is stateless: each request gets its own server and transport, so concurrent clients never share state.
 
 Optional env: `LAX_BASE_URL` (default `https://lax.kognai.ai/registry`), `PORT`.
 
@@ -102,6 +104,8 @@ const server = createLaxMcpServer({
 });
 // connect with StdioServerTransport or StreamableHTTPServerTransport
 ```
+
+TypeScript types ship in `src/index.d.ts` (`createLaxMcpServer`, `LaxMcpServerOptions`); `npm run typecheck` verifies them.
 
 ## Privacy
 
