@@ -1,6 +1,6 @@
 {
   "name": "@devx-agent/lax-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server exposing the Kognai LAX registry as tools (search, offers, jobs, submit)",
   "type": "module",
   "license": "MIT",
@@ -10,8 +10,16 @@
     "url": "git+https://github.com/devx-agent/lax-mcp.git"
   },
   "homepage": "https://github.com/devx-agent/lax-mcp#readme",
-  "keywords": ["mcp", "lax", "kognai", "x402", "agents"],
-  "engines": { "node": ">=20" },
+  "keywords": [
+    "mcp",
+    "lax",
+    "kognai",
+    "x402",
+    "agents"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "main": "./src/index.js",
   "exports": {
     ".": "./src/index.js"
@@ -19,7 +27,12 @@
   "bin": {
     "lax-mcp": "./bin/lax-mcp.js"
   },
-  "files": ["src", "bin", "README.md", "LICENSE"],
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "node --test test/*.test.js",
     "start": "node bin/lax-mcp.js"
